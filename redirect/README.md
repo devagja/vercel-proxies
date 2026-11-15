@@ -13,8 +13,9 @@ Hay dos formas válidas; la primera ya funciona importando la raíz del repo:
 
 - **Raíz del repo** (recomendada si no quieres cambiar ajustes): el `vercel.json`
   de la raíz desactiva instalación y build (`installCommand`/`buildCommand` en
-  `true`) y hace la misma redirección. Así el monorepo no intenta compilar y el
-  despliegue no puede fallar por `turbo` ni por `devEngines`.
+  `true`), declara `outputDirectory: "public"` y hace la misma redirección. Así
+  el monorepo no intenta compilar y Vercel encuentra la salida estática en
+  `public/` (sin ese directorio el build falla con `STATIC_BUILD_NO_OUT_DIR`).
 - **Solo esta carpeta**: en *Root Directory* elige `redirect`.
 
 1. Ve a <https://vercel.com/new> e importa el repositorio de este proyecto.

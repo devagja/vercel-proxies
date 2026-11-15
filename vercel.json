@@ -3,6 +3,7 @@
   "framework": null,
   "installCommand": "true",
   "buildCommand": "true",
+  "outputDirectory": "public",
   "redirects": [
     {
       "source": "/(.*)",
