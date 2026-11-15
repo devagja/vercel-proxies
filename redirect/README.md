@@ -9,6 +9,14 @@ a <https://www.sur-digital.com/scruz-abogados/> con un redirect permanente (308)
 
 ## Desplegar en Vercel
 
+Hay dos formas válidas; la primera ya funciona importando la raíz del repo:
+
+- **Raíz del repo** (recomendada si no quieres cambiar ajustes): el `vercel.json`
+  de la raíz desactiva instalación y build (`installCommand`/`buildCommand` en
+  `true`) y hace la misma redirección. Así el monorepo no intenta compilar y el
+  despliegue no puede fallar por `turbo` ni por `devEngines`.
+- **Solo esta carpeta**: en *Root Directory* elige `redirect`.
+
 1. Ve a <https://vercel.com/new> e importa el repositorio de este proyecto.
 2. En **Root Directory** selecciona `redirect` (importante: no la raíz del monorepo).
 3. Framework Preset: **Other**. Sin build command ni output directory.
